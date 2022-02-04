@@ -1,0 +1,58 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+.footer {
+  padding-top: var.$separator;
+  background-color: var.$color_secondary;
+  &__grid {
+    @include mx.media-tablet {
+      @include mx.grid(3);
+    }
+  }
+  &__heading {
+    color: var.$color_white;
+    margin: 0;
+    text-align: center;
+    @include mx.media-tablet {
+      text-align: left;
+    }
+  }
+  &__widget {
+    margin-bottom: var.$separator;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  &__nav,
+  &__text {
+    margin-top: 2rem;
+  }
+  &__nav {
+    display: flex;
+    flex-direction: column;
+  }
+  &__link,
+  &__text {
+    font-size: 2rem;
+    line-height: 1.8;
+    text-align: center;
+    color: var.$color_white;
+    @include mx.media-tablet {
+      text-align: left;
+    }
+  }
+  &__link {
+    transition: color 0.3s ease;
+    &:hover {
+      color: var.$color_primary;
+    }
+  }
+  &__copyright {
+    margin: 0;
+    text-align: center;
+    padding: 2rem;
+    font-weight: bold;
+    color: var.$color_white;
+    background-color: var.$color_primary;
+  }
+}

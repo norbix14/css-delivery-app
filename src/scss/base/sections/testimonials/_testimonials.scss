@@ -1,0 +1,14 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+.testimonials {
+  padding: var.$separator 0;
+  &__heading {
+    text-align: center;
+  }
+  &__grid {
+    @include mx.media-desktop {
+      @include mx.grid(5, 2rem);
+    }
+  }
+}

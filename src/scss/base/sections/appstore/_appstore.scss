@@ -1,0 +1,48 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+.download {
+  background-color: var.$color_gray_light;
+  padding: var.$separator 0;
+  &__grid {
+    display: flex;
+    flex-direction: column-reverse;
+    @include mx.media-tablet {
+      @include mx.grid(2, var.$separator);
+    }
+  }
+  &__image {
+    width: 50%;
+    margin: 5rem auto 0 auto;
+    transition: transform 0.2s ease;
+    &:hover {
+      transform: rotate(2deg) scale(1.05);
+    }
+    @include mx.media-tablet {
+      margin: 0 auto;
+    }
+  }
+}
+
+.appstore {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  &__heading {
+    margin: 2rem 0 0 0;
+    color: var.$color_secondary;
+  }
+  &__text {
+    margin-bottom: 3rem;
+  }
+  &__grid {
+    @include mx.grid(2, 2rem);
+  }
+  &__link {
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.08);
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@use 'media-queries' as mx;
+
+@mixin button($bgColor, $color) {
+  font-size: 2rem;
+  padding: 1.2rem 3rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border: none;
+  color: $color;
+  background-color: $bgColor;
+  &:hover {
+    cursor: pointer;
+    background-color: darken($bgColor, 10);
+  }
+  &:focus-visible {
+    outline: none;
+  }
+  @include mx.media-tablet {
+    width: auto;
+  }
+}

@@ -1,0 +1,11 @@
+@use 'base/variables' as var;
+
+.container {
+  max-width: 120rem;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.img {
+  width: 100%;
+}

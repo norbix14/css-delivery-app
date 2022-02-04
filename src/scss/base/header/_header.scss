@@ -1,0 +1,20 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var.$separator 0;
+  @include mx.media-desktop {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__logo {
+    width: 30rem;
+    margin-bottom: 5rem;
+    @include mx.media-desktop {
+      margin-bottom: 0;
+    }
+  }
+}

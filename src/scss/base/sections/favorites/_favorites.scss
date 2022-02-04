@@ -1,0 +1,16 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+.favorites {
+  padding: var.$separator 0;
+  background-color: var.$color_gray_light;
+  &__heading {
+    text-align: center;
+    color: var.$color_secondary;
+  }
+  &__grid {
+    @include mx.media-tablet {
+      @include mx.grid(2, 4rem);
+    }
+  }
+}

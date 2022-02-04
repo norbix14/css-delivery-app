@@ -1,0 +1,30 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+.steps {
+  margin-top: 5rem;
+  &__content {
+    margin-top: -0.2rem;
+    background-color: var.$color_primary;
+  }
+  &__heading {
+    text-align: center;
+    color: var.$color_white;
+    &--description {
+      font-size: 1.8rem;
+      display: block;
+    }
+  }
+  &__grid {
+    @include mx.media-tablet {
+      @include mx.grid(3, var.$separator);
+    }
+  }
+  &__img {
+    margin: 0 auto;
+    transition: all 0.2s ease;
+    &:hover {
+      transform: rotate(-2deg) scale(1.05);
+    }
+  }
+}
